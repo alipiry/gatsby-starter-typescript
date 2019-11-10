@@ -5,12 +5,29 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql, useStaticQuery } from 'gatsby';
 
-function SEO({ description, lang, meta, title }) {
+type MetaProps = JSX.IntrinsicElements['meta'];
+
+type HtmlProps = JSX.IntrinsicElements['html'] & {
+  [key: string]: string;
+};
+
+interface Props {
+  description?: string;
+  lang?: HtmlProps | any;
+  meta?: MetaProps[] | any;
+  title: string;
+}
+
+export const Seo: React.FC<Props> = ({
+  description,
+  lang,
+  meta,
+  title,
+}: Props) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -22,18 +39,14 @@ function SEO({ description, lang, meta, title }) {
           }
         }
       }
-    `
-  )
+    `,
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      htmlAttributes={lang}
       meta={[
         {
           name: `description`,
@@ -68,21 +81,14 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+      title={title}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
     />
-  )
-}
+  );
+};
 
-SEO.defaultProps = {
+Seo.defaultProps = {
+  description: ``,
   lang: `en`,
   meta: [],
-  description: ``,
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-}
-
-export default SEO
+};

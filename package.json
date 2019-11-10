@@ -1,25 +1,39 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-starter-typescript",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple typescript starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ali Piry <alipiry@icloud.com>",
   "dependencies": {
+    "@types/react-helmet": "^5.0.14",
     "gatsby": "^2.17.6",
     "gatsby-image": "^2.2.30",
     "gatsby-plugin-manifest": "^2.2.25",
     "gatsby-plugin-offline": "^3.0.17",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-sharp": "^2.2.34",
+    "gatsby-plugin-typescript": "^2.1.15",
     "gatsby-source-filesystem": "^2.1.35",
     "gatsby-transformer-sharp": "^2.3.1",
-    "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "@types/node": "^12.12.6",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.7.2"
   },
   "keywords": [
     "gatsby"
@@ -35,9 +49,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/alipiry/gatsby-starter-typescript"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/alipiry/gatsby-starter-typescript/issues"
   }
 }
