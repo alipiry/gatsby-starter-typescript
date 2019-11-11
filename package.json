@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-typescript",
   "description": "A simple typescript starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Ali Piry <alipiry@icloud.com>",
   "dependencies": {
     "@types/react-helmet": "^5.0.14",
