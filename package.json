@@ -2,7 +2,7 @@
   "name": "gatsby-starter-typescript",
   "description": "A simple typescript starter to get up and developing quickly with Gatsby",
   "version": "1.0.0",
-  "author": "Ali Piry <alipiry@icloud.com>",
+  "author": "Ali Piry <alipiry@disroot.org>",
   "dependencies": {
     "@types/react-helmet": "^5.0.14",
     "gatsby": "^2.17.6",
@@ -19,7 +19,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "@types/node": "^12.12.6",
+    "@types/node": "^13.7.0",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "@typescript-eslint/eslint-plugin": "^2.6.1",

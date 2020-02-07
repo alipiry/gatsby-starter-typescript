@@ -15,7 +15,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export const Layout = ({ children }: Props) => {
+export function Layout({ children }: Props) {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -46,4 +46,4 @@ export const Layout = ({ children }: Props) => {
       </div>
     </>
   );
-};
+}
