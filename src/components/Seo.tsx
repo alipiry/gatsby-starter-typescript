@@ -17,8 +17,8 @@ type HtmlProps = JSX.IntrinsicElements['html'] & {
 
 interface Props {
   description?: string;
-  lang?: HtmlProps | any;
-  meta?: MetaProps[] | any;
+  lang?: HtmlProps;
+  meta?: MetaProps[];
   title: string;
 }
 
@@ -75,7 +75,7 @@ export function Seo({ description, lang, meta, title }: Props) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat(meta as any)}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
     />
